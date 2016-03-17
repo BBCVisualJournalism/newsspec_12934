@@ -1,0 +1,19 @@
+{
+    "made_up_key": "This example shows how you can pass values from your vocabs to the template. You should get rid of this one, but keep all of the meta properties (i.e. you'll need to reproduce the meta property rows in your spreadsheet).",
+    "meta:description":         "",
+    "meta:title":               "",
+    "meta:type":                "website",
+    "meta:site_name":           "",
+    "meta:locale":              "",
+    "meta:author":              "",
+    "meta:section":             "",
+    "meta:url":                 "",
+    "meta:image":               "",
+    "meta:twitter:card":        "summary_large_image",
+    "meta:twitter:site":        "@BBCNews",
+    "meta:twitter:title":       "",
+    "meta:twitter:description": "",
+    "meta:twitter:creator":     "@BBCNews",
+    "meta:twitter:img:src":     "",
+    "meta:twitter:domain":      ""
+}
