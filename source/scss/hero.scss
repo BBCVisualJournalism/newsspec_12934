@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-image: url('../img/976xCecesinkde27.jpg');
     height: 0;
     padding-bottom: 37%;
     position: relative;
@@ -23,6 +24,7 @@
         padding-bottom: 0;
         height: auto;
         background-color: transparent;
+        background-image: none;
     }
 
     .bbc-news-vj-grid-wrapper {
@@ -135,4 +137,8 @@
             padding-left: 1.375em;
         }
     }
+}
+
+.intro {
+    font-weight: bold;
 }
