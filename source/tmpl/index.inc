@@ -1,16 +1,13 @@
-<div class="hero"><!-- bg img here -->
-
+<div class="hero">
     <div class="bbc-news-vj-grid-wrapper">
         <div class="bbc-news-vj-grid-wrapper__fluid-inner">
-
             <div class="hero__titles">
-                <h1 class="hero__heading">HEADER</h1>
-                <p class="hero__subheading">A subheader</p>
+                <h1 class="hero__heading"><%= hero_title %></h1>
+                <p class="hero__subheading"><%= hero_subtitle %></p>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="bbc-news-vj-grid-wrapper">
     <div class="bbc-news-vj-grid-wrapper__fluid-inner">
