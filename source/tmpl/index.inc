@@ -11,6 +11,15 @@
 
 <div class="bbc-news-vj-grid-wrapper">
     <div class="bbc-news-vj-grid-wrapper__fluid-inner">
+        <ul class="meta-list">
+            <li class="meta-list__item meta-list__item--timestamp">
+                <time datetime="2016-04-01"><%= timestamp %></time>
+            </li>
+            <li class="meta-list__item meta-list__item--topic">
+                <a href="<%= topic_link %>"><%= topic_label %></a>
+            </li>
+        </ul>
+
         <p class="intro">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
