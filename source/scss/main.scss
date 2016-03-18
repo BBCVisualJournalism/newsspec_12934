@@ -5,13 +5,11 @@
 // YOUR APPLICATION CSS GOES BELOW
 
 .bbc-news-vj-wrapper {
-
     // Developer:
     //  SASS placeholder selectors (i.e. `%button--standard`) mean that the corresponding CSS
     //  is only pulled into our CSS file if we use `@extend`.
     //  The CSS for the buttons, radio inputs and checkboxes amount to around 10KB, so only
     //  include these if you need them.
-
     input[type="submit"],
     input[type="button"],
     button {
@@ -46,4 +44,9 @@
         @extend %form--radio;
     }
 
+    background-color: #222;
+    color: #fff;
+    padding-bottom: 1em;
 }
+
+@import "hero";
