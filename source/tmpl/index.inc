@@ -11,10 +11,9 @@
 
 <div class="bbc-news-vj-grid-wrapper">
     <div class="bbc-news-vj-grid-wrapper__fluid-inner">
+
         <p class="intro">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <%= intro_paragraph %>
         </p>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -25,3 +24,17 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 </div>
+
+<div class="bbc-news-vj-grid-wrapper">
+    <div class="bbc-news-vj-grid-wrapper__fluid-inner">
+        <p><%= section_1_paragraph %></p>
+
+        <blockquote class="bbcquotemark">
+            <%= section_1_blockquote %>
+            <cite class="bbcquotemark__cite"><%= section_1_blockquote_credit %></cite>
+        </blockquote>
+    </div>
+</div>
+
+
+
