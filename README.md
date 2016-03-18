@@ -35,4 +35,4 @@ grunt translate
 This project was built using the [developer scaffold](https://github.com/BBCVisualJournalism/developer-scaffold) version 1.0.1.
 
 ## License
-Copyright (c) 2016 BBC 
+Copyright (c) 2016 BBC
