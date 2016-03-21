@@ -1,11 +1,12 @@
-define(['jquery', 'bump-3'], function ($, bump) {
+define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, utils) {
 
-    var Video = function (videoContainerSelector, vpid, holdingImage) {
+    var Video = function (videoContainerSelector, vpid, holdingImage, autoplay) {
         this.selector = videoContainerSelector;
         this.$videoContainer = $(this.selector);
         this.videoEl = bump(this.selector).find('.bbc-news-vj-video__player');
         this.vpid = vpid;
         this.holdingImage = holdingImage;
+        this.autoplay = autoplay || false;
         this.mp = null;
         this.$overlay = this.$videoContainer.find('.bbc-news-vj-video__overlay');
         this.cta_breakpoint = 600;
@@ -26,7 +27,7 @@ define(['jquery', 'bump-3'], function ($, bump) {
                     holdingImageURL: this.holdingImage
                 },
                 responsive: true,
-                autoplay: false
+                autoplay: this.autoplay
             };
             this.mp = this.videoEl.player(playerSettings);
             this.mp.load();
@@ -47,6 +48,11 @@ define(['jquery', 'bump-3'], function ($, bump) {
                     self.disableSmpCta();
                 } else {
                     self.enableSmpCta();
+                }
+            });
+            wrapper.onRawScroll(function (scrollTop){
+                if (utils.isElementInViewport(self.$videoContainer)){
+                    self.mp.pause();
                 }
             });
         },

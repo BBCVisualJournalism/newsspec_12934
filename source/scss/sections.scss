@@ -66,7 +66,9 @@
                 font-weight: normal;
             }
         }
-
+        &--hidden{
+            display:none;
+        }
         @media (min-width: 600px) {
             background-color:#000000;
             bottom: 0;
@@ -79,5 +81,16 @@
                 display:block;
             }
         }
+    }
+}
+.section .bbc-news-vj-video-wrapper--hero {
+    @media (min-width: 1008px) {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        max-width:100%;
+        margin:0;
+        padding:0;
     }
 }
