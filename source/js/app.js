@@ -1,4 +1,4 @@
-define(['wrapper', 'ShareToolsTemplate', 'buttons'], function (wrapper, ShareTemplate, exampleButtons) {
+define(['wrapper', 'ShareToolsTemplate', 'buttons', 'video'], function (wrapper, ShareTemplate, exampleButtons, Video) {
 
     console.log(wrapper.url().hostUrl, wrapper.url().onbbcdomain, wrapper.url().parameters);
 
@@ -57,6 +57,8 @@ define(['wrapper', 'ShareToolsTemplate', 'buttons'], function (wrapper, ShareTem
             viewLabel:  true
         });
     }, 2000);
+
+    new Video('#bbc-news-vj-video--one', 'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg');
 
     wrapper.markPageAsLoaded();
 
