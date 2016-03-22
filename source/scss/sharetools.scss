@@ -1,0 +1,36 @@
+.bbc-news-vj-sharetools {
+    .share {
+        text-align: center;
+        &__button {
+            max-width: none;
+            height: 26px;
+            background-color: #41850d;
+            margin: 0 auto;
+            display: inline-block;
+            border: none;
+            padding: 0;
+            p {
+                float: left;
+                text-align: center;
+                font-size: 16px;
+                color: #fff;
+                line-height: 26px;
+                padding: 0 5px;
+            }
+        }
+        &__png_icon {
+            float: left;
+            margin: 3px 5px;
+        }
+        &__overlay {
+            min-width: 0;
+            width: 200px;
+            top: 26px;
+            left: 50%;
+            margin-left: -100px;
+            p {
+                padding: 0 16px;
+            }
+        }
+    }
+}
