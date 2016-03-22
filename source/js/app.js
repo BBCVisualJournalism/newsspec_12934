@@ -58,10 +58,11 @@ define(['wrapper', 'ShareToolsTemplate', 'buttons', 'video'], function (wrapper,
         });
     }, 2000);
 
-    new Video('#bbc-news-vj-video--hero', 'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', true);
-    new Video('#bbc-news-vj-video--one',  'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', false);
-    new Video('#bbc-news-vj-video--two',  'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', false);
-    new Video('#bbc-news-vj-video--three',  'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', false);
+    new Video('#bbc-news-vj-video--hero',  'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', true);
+    new Video('#bbc-news-vj-video--two',   'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', false);
+    new Video('#bbc-news-vj-video--three', 'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', false);
+    new Video('#bbc-news-vj-video--four',  'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', false);
+    new Video('#bbc-news-vj-video--five',  'p03912vm', 'http://news.stage.bbc.co.uk/news/special/2015/newsspec_12499/content/english/img/venezuela/venezuela_poster_image_1290.jpg', false);
 
     wrapper.markPageAsLoaded();
 
