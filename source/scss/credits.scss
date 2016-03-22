@@ -1,9 +1,60 @@
 .bbc-news-vj-wrapper .tmpShareToolsHolder .ns__share-dropdown .share__button p {
     color: #ccc;
 }
-.bbc-news-vj-wrapper .ns_creditsHolder {
-    margin-top: 5em;
+.ns_onward-journeys {
+    margin: 0;
+    padding: 0;
+    &-inner {
+        margin: 0 auto;
+        padding: 0;
+        ul {
+            padding: 0;
+            li {
+                clear: both;
+                display: block;
+                text-align: left;
+                width: 100%;
+            }
+            img {
+                display: block;
+                width: 50%;
+                float: left;
+                margin: 0 8px 16px 0;
+            }
+            span {
+                display: block;
+                font-weight: bold;
+                padding: 0;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
 }
-.bbc-news-vj-wrapper .ns_creditsHolder .ns_onwardJourneys a {
-    color: white;
+.section .ns_creditsLineThin {
+    width: 100%;
+    height: 1px;
+    background-color: #bdbdbd; }
+.section .ns_creditsLineThick {
+    width: 100%;
+    height: 8px;
+    background-color: gainsboro;
+}
+
+@media (min-width: 768px) {
+    .ns_onward-journeys {
+        &-inner {
+            ul {
+                img {
+                    display: block;
+                    width: 33.33333%;
+                    max-width: 165px;
+                    float: left;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
 }

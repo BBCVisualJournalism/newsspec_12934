@@ -1,13 +1,18 @@
+.section {
+    margin-top:3em;
+    margin-bottom:3em;
+}
+
 .section .bbc-news-vj-video__wrapper {
     max-width:950px;
-    margin-top: 3em;
-    margin-bottom: 4.5em;
+    margin-bottom: 2.5em;
     margin-left:auto;
     margin-right:auto;
-    padding:2%;
+    padding-left:2%;
+    padding-right:2%;
     width:100%;
     @media (min-width: 600px) {
-        margin-bottom:1em;
+        margin-bottom:0;
     }
 }
 .section .bbc-news-vj-video {
