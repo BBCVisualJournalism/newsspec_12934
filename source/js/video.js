@@ -7,6 +7,9 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         this.vpid = vpid;
         this.holdingImage = holdingImage;
         this.autoplay = autoplay || false;
+        if (window.innerWidth < 1008){
+            this.autoplay = false;
+        }
         this.mp = null;
         this.$overlay = this.$videoContainer.find('.bbc-news-vj-video__overlay');
         this.cta_breakpoint = 600;
