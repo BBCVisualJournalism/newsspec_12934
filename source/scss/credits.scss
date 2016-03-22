@@ -1,10 +1,9 @@
-.ns_creditsHolder {
+.bbc-news-vj-wrapper .tmpShareToolsHolder .ns__share-dropdown .share__button p {
+    color: #ccc;
+}
+.bbc-news-vj-wrapper .ns_creditsHolder {
     margin-top: 5em;
 }
-.ns_creditsHolder .ns_onwardJourneys .ns_credits__href a:hover, a:visited, a:link, a:active {
+.bbc-news-vj-wrapper .ns_creditsHolder .ns_onwardJourneys a {
     color: white;
-    // border-bottom: none;
-}
-.tmpShareToolsHolder .ns__share-dropdown .share__button p {
-    color: #ccc;
 }
