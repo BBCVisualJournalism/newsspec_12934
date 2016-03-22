@@ -11,6 +11,8 @@ define(['wrapper', 'video', 'sharetools'], function (wrapper, Video, ShareTools)
     new ShareTools('#bbc-news-vj-sharetools--1');
     new ShareTools('#bbc-news-vj-sharetools--2');
     new ShareTools('#bbc-news-vj-sharetools--3');
+    new ShareTools('#bbc-news-vj-sharetools--4');
+    new ShareTools('#bbc-news-vj-sharetools--5');
 
     wrapper.markPageAsLoaded();
 });
