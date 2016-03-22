@@ -51,8 +51,10 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
                 }
             });
             wrapper.onRawScroll(function (scrollTop){
-                if (utils.isElementInViewport(self.$videoContainer)){
-                    self.mp.pause();
+                if (self.$videoContainer.attr('id') === 'bbc-news-vj-video--hero') {
+                    if (!utils.isElementInViewport(self.$videoContainer)){
+                        self.mp.pause();
+                    }
                 }
             });
         },
