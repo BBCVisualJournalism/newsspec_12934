@@ -1,0 +1,45 @@
+<div class="hero">
+    <div class="bbc-news-vj-grid-wrapper">
+        <div class="bbc-news-vj-grid-wrapper__fluid-inner">
+            <div class="hero__titles">
+                <h1 class="hero__heading"><%= hero_title %></h1>
+                <p class="hero__subheading"><%= hero_subtitle %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="section--intro">
+    <div class="bbc-news-vj-grid-wrapper">
+        <div class="bbc-news-vj-grid-wrapper__fluid-inner">
+            <ul class="meta-list">
+                <li class="meta-list__item meta-list__item--timestamp">
+                    <time datetime="2016-04-01"><%= timestamp %></time>
+                </li>
+                <li class="meta-list__item meta-list__item--topic">
+                    <a href="<%= topic_link %>"><%= topic_label %></a>
+                </li>
+            </ul>
+
+            <p class="intro">
+                <%= intro_paragraph %>
+            </p>
+            <p>
+                <%= intro_paragraph_2 %>
+            </p>
+        </div>
+    </div>
+
+    <div class="bbc-news-vj-video__wrapper bbc-news-vj-video-wrapper--hero">
+        <div class="bbc-news-vj-video" id="bbc-news-vj-video--hero">
+            <div class="bbc-news-vj-video__player"></div>
+            <div class="bbc-news-vj-video__overlay">
+                <button class="bbc-news-vj-video__overlay__play" aria-label="Play"></button>
+                <div class="bbc-news-vj-video__overlay__text">
+                    <div class="bbc-news-vj-video__overlay__text__title"><%= hero_video_title %></div>
+                    <div class="bbc-news-vj-video__overlay__text__summary"><%= hero_video_summary %></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

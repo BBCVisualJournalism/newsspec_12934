@@ -47,6 +47,10 @@
     background-color: #222;
     color: #fff;
     padding-bottom: 1em;
+    position:relative;
+    @media (min-width: 1008px) {
+        padding-top:60%;
+    }
 }
 
 .bbc-news-vj-grid-wrapper {
@@ -55,3 +59,4 @@
 
 @import "hero";
 @import "quotes";
+@import "sections";
