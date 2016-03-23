@@ -6,13 +6,15 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         this.videoEl = bump(this.selector).find('.bbc-news-vj-video__player');
         this.vpid = vpid;
         this.holdingImage = holdingImage;
-        this.autoplay = autoplay || false;
         if (window.innerWidth < 1008){
             this.autoplay = false;
+        } else {
+            this.autoplay = autoplay;
         }
         this.mp = null;
         this.$overlay = this.$videoContainer.find('.bbc-news-vj-video__overlay');
-        this.cta_breakpoint = 600;
+        this.ctaBreakpoint = 600;
+        this.firstPlay = true;
 
         this.init();
     };
@@ -36,35 +38,43 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
             this.mp.load();
             this.setEvents();
 
-            if (this.getWindowWidth() >= this.cta_breakpoint) {
+            if (this.getWindowWidth() >= this.ctaBreakpoint) {
                 this.disableSmpCta();
             }
         },
 
         setEvents: function () {
             this.mp.bind('ended', this.videoEnded.bind(this));
-            this.mp.bind('playing', this.hideOverlay.bind(this));
+            this.mp.bind('playing', this.onPlaying.bind(this));
 
             var self = this;
             $(window).on('resize', function () {
-                if (self.getWindowWidth() >= self.cta_breakpoint) {
+                if (self.getWindowWidth() >= self.ctaBreakpoint) {
                     self.disableSmpCta();
                 } else {
                     self.enableSmpCta();
                 }
             });
             wrapper.onRawScroll(function (scrollTop){
-                if (self.$videoContainer.attr('id') === 'bbc-news-vj-video--hero') {
-                    if (!utils.isElementInViewport(self.$videoContainer)){
-                        self.mp.pause();
-                    }
+                if (self.$videoContainer.attr('id') === 'bbc-news-vj-video--hero' && !utils.isElementInViewport(self.$videoContainer)) {
+                    self.mp.pause();
                 }
             });
         },
 
         playVideo: function () {
-            this.hideOverlay();
             this.mp.play();
+            this.hideOverlay();
+        },
+
+        onPlaying: function () {
+            this.hideOverlay();
+            if (this.firstPlay) {
+                this.firstPlay = false;
+                if (this.$videoContainer.attr('id') === 'bbc-news-vj-video--hero' && !utils.isElementInViewport(this.$videoContainer)) {
+                    this.mp.pause();
+                }
+            }
         },
 
         hideOverlay: function () {
