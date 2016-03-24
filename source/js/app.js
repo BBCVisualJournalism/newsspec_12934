@@ -1,4 +1,4 @@
-define(['wrapper', 'video', 'sharetools'], function (wrapper, Video, ShareTools) {
+define(['wrapper', 'video', 'sharetools', 'istatsLogger'], function (wrapper, Video, ShareTools, istatsLogger) {
 
     console.log(wrapper.url().hostUrl, wrapper.url().onbbcdomain, wrapper.url().parameters);
 
@@ -14,6 +14,8 @@ define(['wrapper', 'video', 'sharetools'], function (wrapper, Video, ShareTools)
     new ShareTools('#bbc-news-vj-sharetools--3');
     new ShareTools('#bbc-news-vj-sharetools--4');
     new ShareTools('#bbc-news-vj-sharetools--5');
+
+    istatsLogger.init();
 
     wrapper.markPageAsLoaded();
 });
