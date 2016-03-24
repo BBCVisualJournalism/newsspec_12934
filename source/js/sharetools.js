@@ -42,6 +42,7 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
             var self = this;
             this.$element.on('click', function () {
                 self.updateMessages(self.shareMessage);
+                self.updateURLs(self.shareUrl);
             });
         },
 
@@ -56,6 +57,10 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
                     message: message
                 }
             });
+        },
+
+        updateURLs: function (shareUrl) {
+            wrapper.sharetools.setShareUrl(shareUrl);
         }
     };
 
