@@ -5,13 +5,13 @@
 
 .section .bbc-news-vj-video__wrapper {
     max-width:950px;
-    margin-bottom: 2.5em;
+    margin-bottom: 80px;
     margin-left:auto;
     margin-right:auto;
     padding-left:2%;
     padding-right:2%;
     width:100%;
-    @media (min-width: 600px) {
+    @media (min-width: 800px) {
         margin-bottom:0;
     }
 }
@@ -24,6 +24,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 0;
         background-size: cover;
         position:absolute;
     }
@@ -74,7 +75,7 @@
         &--hidden{
             display:none;
         }
-        @media (min-width: 600px) {
+        @media (min-width: 800px) {
             background-color:#000000;
             bottom: -0.5px;
             height: 64px;
