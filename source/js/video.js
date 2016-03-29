@@ -66,6 +66,7 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
 
         onPlaying: function () {
             this.hideOverlay();
+            this.hideBgImg();
             if (this.firstPlay) {
                 this.firstPlay = false;
                 var videoTitle = this.$videoContainer.find('.bbc-news-vj-video__overlay__text__title').text();
@@ -78,6 +79,10 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
                     this.mp.pause();
                 }
             }
+        },
+
+        hideBgImg: function () {
+            this.$videoContainer.css('background-image', 'none');
         },
 
         hideOverlay: function () {

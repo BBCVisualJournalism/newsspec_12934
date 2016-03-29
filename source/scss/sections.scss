@@ -27,6 +27,7 @@
         z-index: 0;
         background-size: cover;
         position:absolute;
+        padding:0;
     }
     &__overlay {
         bottom: -64px;
@@ -98,7 +99,7 @@
 }
 .section .bbc-news-vj-video--one {
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0 0;
     background-size: cover;
     background-image: url(../img/976xmamiminide28.jpg);
 }
