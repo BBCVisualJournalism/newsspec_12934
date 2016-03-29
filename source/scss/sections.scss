@@ -90,6 +90,40 @@
     }
 }
 .section .bbc-news-vj-video-wrapper--hero {
+    display:none;
+}
+.section .bbc-news-vj-video--one {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/976xmamiminide28.jpg);
+}
+.section .bbc-news-vj-video--two {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/miriamde22.jpg);
+}
+.section .bbc-news-vj-video--three {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/daniele.jpg);
+}
+.section .bbc-news-vj-video--four {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/cecedreamy27.jpg);
+}
+.section .bbc-news-vj-video--five {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/sharon.jpg);
+}
+
+.section .bbc-news-vj-video-wrapper--hero {
     @media (min-width: 1008px) {
         position:absolute;
         top:0;

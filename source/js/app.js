@@ -1,6 +1,6 @@
 define(['wrapper', 'video', 'sharetools', 'istatsLogger'], function (wrapper, Video, ShareTools, istatsLogger) {
 
-    console.log(wrapper.url().hostUrl, wrapper.url().onbbcdomain, wrapper.url().parameters);
+    //console.log(wrapper.url().hostUrl, wrapper.url().onbbcdomain, wrapper.url().parameters);
 
     new Video('#bbc-news-vj-video--hero',  'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/cecedreamy27.jpg', true);
     new Video('#bbc-news-vj-video--one',   'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg', false);
@@ -18,4 +18,19 @@ define(['wrapper', 'video', 'sharetools', 'istatsLogger'], function (wrapper, Vi
     istatsLogger.init();
 
     wrapper.markPageAsLoaded();
+
+    //enhance for js capable browser
+    $( '.bbc-news-vj-video__overlay' ).removeClass('bbc-news-vj-video__overlay--hidden');
+    $( '.bbc-news-vj-video-wrapper--hero' ).css( 'display', 'inherit' );
+    function resizer () {
+        if (window.innerWidth > 1008){
+            $( '.bbc-news-vj-wrapper ' ).css( 'padding-top', '60%' );
+        } else {
+            $( '.bbc-news-vj-wrapper ' ).css( 'padding-top', '0' );
+        }
+    }
+    resizer();
+    $(window).resize(function(){
+        resizer();
+    });
 });
