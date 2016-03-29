@@ -2,7 +2,7 @@ define(['wrapper', 'video', 'sharetools', 'istatsLogger'], function (wrapper, Vi
 
     //console.log(wrapper.url().hostUrl, wrapper.url().onbbcdomain, wrapper.url().parameters);
 
-    new Video('#bbc-news-vj-video--hero',  'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/cecedreamy27.jpg', true);
+    new Video('#bbc-news-vj-video--hero',  'p03mmv1n', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/976xcecesinkde27.jpg', true);
     new Video('#bbc-news-vj-video--one',   'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg', false);
     new Video('#bbc-news-vj-video--two',   'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/miriamde22.jpg', false);
     new Video('#bbc-news-vj-video--three', 'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/daniele.jpg', false);
