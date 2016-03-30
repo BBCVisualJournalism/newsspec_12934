@@ -1,8 +1,17 @@
-define(['wrapper', 'video', 'sharetools', 'istatsLogger'], function (wrapper, Video, ShareTools, istatsLogger) {
+define(['wrapper', 'video', 'sharetools', 'istatsLogger', 'progressiveEnhancement'], function (wrapper, Video, ShareTools, istatsLogger, ProgressiveEnhancement) {
 
     //console.log(wrapper.url().hostUrl, wrapper.url().onbbcdomain, wrapper.url().parameters);
 
-    new Video('#bbc-news-vj-video--hero',  'p03mmv1n', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/976xcecesinkde27.jpg', true);
+    var hero_holding_img;
+
+    if (window.innerWidth > 600){
+        // desktop holding img
+        hero_holding_img = 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/976xcecesinkde27.jpg';
+    } else {
+        // mobile holding img
+        hero_holding_img = 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/976xsenade47.jpg';
+    }
+    new Video('#bbc-news-vj-video--hero',  'p03mmv1n', hero_holding_img, true);
     new Video('#bbc-news-vj-video--one',   'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg', false);
     new Video('#bbc-news-vj-video--two',   'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/miriamde22.jpg', false);
     new Video('#bbc-news-vj-video--three', 'p03912vm', 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/daniele.jpg', false);
@@ -19,18 +28,6 @@ define(['wrapper', 'video', 'sharetools', 'istatsLogger'], function (wrapper, Vi
 
     wrapper.markPageAsLoaded();
 
-    //enhance for js capable browser
-    $( '.bbc-news-vj-video__overlay' ).removeClass('bbc-news-vj-video__overlay--hidden');
-    $( '.bbc-news-vj-video-wrapper--hero' ).css( 'display', 'inherit' );
-    function resizer () {
-        if (window.innerWidth > 1008){
-            $( '.bbc-news-vj-wrapper ' ).css( 'padding-top', '60%' );
-        } else {
-            $( '.bbc-news-vj-wrapper ' ).css( 'padding-top', '0' );
-        }
-    }
-    resizer();
-    $(window).resize(function(){
-        resizer();
-    });
+    ProgressiveEnhancement.init();
+
 });

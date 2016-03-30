@@ -3,6 +3,10 @@
     margin-bottom:3em;
 }
 
+.section--intro {
+    margin-top:0;
+}
+
 .section .bbc-news-vj-video__wrapper {
     max-width:950px;
     margin-bottom: 80px;
@@ -95,7 +99,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url(../img/976xcecesinkde27.jpg);
+    background-image: url(../img/976xsenade47.jpg);
+    @media (min-width: 600px) {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../img/976xcecesinkde27.jpg);
+    }
 }
 .section .bbc-news-vj-video--one {
     background-repeat: no-repeat;

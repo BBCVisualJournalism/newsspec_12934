@@ -35,17 +35,12 @@
         position: absolute;
         bottom: 0;
         color: #fff;
-        text-shadow: 0 0.0625em 0.5em #000;
+        text-shadow: 0.0625em 0.0625em 0.25em #000;
         padding-bottom: 1.25em;
-
-        @media (min-width: 600px) {
-            padding-bottom: 2em;
-        }
 
         @media (min-width: 1008px) {
             position: static;
             text-shadow: none;
-            padding-top: 0.67em;
         }
     }
 

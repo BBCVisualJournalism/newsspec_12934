@@ -82,13 +82,19 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         },
 
         playerReady: function () {
-            this.$videoContainer.css('background-image', 'none'); //remove bg img of player container when player is loaded
+            this.hideBgImg();
         },
 
         hideOverlay: function () {
             if (window.innerWidth > 800){
                 this.$overlay.addClass('bbc-news-vj-video__overlay--hidden');
             }
+        },
+
+        hideBgImg: function () {
+            //remove bg img of player container when player is loaded
+            this.$videoContainer.css('background-image', 'none');
+            $('.bbc-news-vj-video-wrapper--hero').css('background-image', 'none');
         },
 
         videoEnded: function () {
