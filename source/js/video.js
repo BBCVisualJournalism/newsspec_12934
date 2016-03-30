@@ -83,6 +83,7 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
 
         playerReady: function () {
             this.hideBgImg();
+            this.$overlay.removeClass('bbc-news-vj-video__overlay--hidden');
         },
 
         hideOverlay: function () {

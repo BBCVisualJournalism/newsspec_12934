@@ -4,7 +4,6 @@ define(['wrapper', 'jquery'], function (wrapper, $) {
 
     ProgressiveEnhancement.prototype = {
         init: function () {
-            $( '.bbc-news-vj-video__overlay' ).removeClass('bbc-news-vj-video__overlay--hidden');
             $( '.bbc-news-vj-video-wrapper--hero' ).css( 'display', 'inherit' );
             var self = this;
             self.resizer();
