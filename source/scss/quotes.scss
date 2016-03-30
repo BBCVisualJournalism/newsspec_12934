@@ -5,12 +5,11 @@
     font-weight: bold;
     margin-left: 1em;
     margin-right: 2em;
-    margin-bottom: 5.75em;
-
+    margin-bottom: 1em;
     @media (min-width: 600px) {
-        margin-bottom: 1.75em;
         margin-top: 2.5em;
         margin-left: 0;
+        margin-bottom: 2em;
     }
 
     &:before {
