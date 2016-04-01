@@ -3,9 +3,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../img/976xCecesinkde27.jpg');
+    background-image: url('../img/976xcecesinkde27.jpg');
     height: 0;
-    padding-bottom: 37%;
+    padding-bottom: 45%;
     position: relative;
 
     @media (max-aspect-ratio: 1/1) {
@@ -35,17 +35,12 @@
         position: absolute;
         bottom: 0;
         color: #fff;
-        text-shadow: 0 0.0625em 0.5em #000;
+        text-shadow: 0.0625em 0.0625em 0.25em #000;
         padding-bottom: 1.25em;
-
-        @media (min-width: 600px) {
-            padding-bottom: 2em;
-        }
 
         @media (min-width: 1008px) {
             position: static;
             text-shadow: none;
-            padding-top: 0.67em;
         }
     }
 
@@ -76,6 +71,12 @@
         @media (min-width: 1280px) {
             font-size: 1.5em;
         }
+    }
+}
+
+.bbc-news-vj-grid-wrapper .hero__intro__text {
+    @media (min-width: 1008px) {
+        display: none;
     }
 }
 
@@ -115,11 +116,11 @@
         }
 
         &--topic a {
-            color: #cc0101;
+            color: #e52020;
             text-decoration: none;
             border: none;
             &:active, &:focus, &:hover {
-                color: #333;
+                color: #fff;
             }
         }
     }

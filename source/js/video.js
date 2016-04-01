@@ -18,8 +18,6 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
 
     Video.prototype = {
         init: function () {
-            this.$videoContainer.on('click', this.playVideo.bind(this));
-
             var playerSettings = {
                 product: 'news',
                 playlistObject: {
@@ -41,6 +39,7 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         },
 
         setEvents: function () {
+            this.mp.bind('initialised', this.playerReady.bind(this));
             this.mp.bind('ended', this.videoEnded.bind(this));
             this.mp.bind('playing', this.onPlaying.bind(this));
 
@@ -80,8 +79,22 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
             }
         },
 
+        playerReady: function () {
+            this.hideBgImg();
+            this.$videoContainer.on('click', this.playVideo.bind(this));
+            this.$overlay.removeClass('bbc-news-vj-video__overlay--hidden');
+        },
+
         hideOverlay: function () {
-            this.$overlay.addClass('bbc-news-vj-video__overlay--hidden');
+            if (window.innerWidth > 800){
+                this.$overlay.addClass('bbc-news-vj-video__overlay--hidden');
+            }
+        },
+
+        hideBgImg: function () {
+            //remove bg img of player container when player is loaded
+            this.$videoContainer.css('background-image', 'none');
+            $('.bbc-news-vj-video-wrapper--hero').css('background-image', 'none');
         },
 
         videoEnded: function () {

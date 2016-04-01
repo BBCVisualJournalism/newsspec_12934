@@ -44,12 +44,12 @@
         @extend %form--radio;
     }
 
-    background-color: #222;
+    background-color: #000;
     color: #fff;
     padding-bottom: 1em;
     position:relative;
     @media (min-width: 1008px) {
-        padding-top:60%;
+        padding-top:0;
     }
 }
 

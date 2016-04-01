@@ -3,6 +3,10 @@
     margin-bottom:3em;
 }
 
+.section--intro {
+    margin-top:0;
+}
+
 .section .bbc-news-vj-video__wrapper {
     max-width:950px;
     margin-bottom: 80px;
@@ -27,6 +31,7 @@
         z-index: 0;
         background-size: cover;
         position:absolute;
+        padding:0;
     }
     &__overlay {
         bottom: -64px;
@@ -37,7 +42,7 @@
         position: absolute;
         &:hover {
             cursor: pointer;
-            .story-media-play-button {
+            .bbc-news-vj-video__overlay__play {
                 background-color: darkred;
             }
         }
@@ -49,7 +54,7 @@
             background-image: url(../img/play_button.png);
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: contain;
+            background-size: 21px 26px;
             border: none;
             display: none;
             float: left;
@@ -89,6 +94,50 @@
         }
     }
 }
+.section .bbc-news-vj-video-wrapper--hero {
+    display:none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../img/976xsenade47.jpg);
+    @media (min-width: 1008px) {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../img/976xcecesinkde27.jpg);
+    }
+}
+.section .bbc-news-vj-video--one {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-image: url(../img/976xmamiminide28.jpg);
+}
+.section .bbc-news-vj-video--two {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/miriamde22.jpg);
+}
+.section .bbc-news-vj-video--three {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/daniele.jpg);
+}
+.section .bbc-news-vj-video--four {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/cecedreamy27.jpg);
+}
+.section .bbc-news-vj-video--five {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/sharon.jpg);
+}
+
 .section .bbc-news-vj-video-wrapper--hero {
     @media (min-width: 1008px) {
         position:absolute;
