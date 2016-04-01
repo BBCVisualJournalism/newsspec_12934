@@ -18,8 +18,6 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
 
     Video.prototype = {
         init: function () {
-            this.$videoContainer.on('click', this.playVideo.bind(this));
-
             var playerSettings = {
                 product: 'news',
                 playlistObject: {
@@ -83,6 +81,7 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
 
         playerReady: function () {
             this.hideBgImg();
+            this.$videoContainer.on('click', this.playVideo.bind(this));
             this.$overlay.removeClass('bbc-news-vj-video__overlay--hidden');
         },
 

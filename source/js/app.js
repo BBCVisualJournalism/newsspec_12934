@@ -4,7 +4,7 @@ define(['wrapper', 'video', 'sharetools', 'istatsLogger', 'progressiveEnhancemen
 
     var hero_holding_img;
 
-    if (window.innerWidth > 600){
+    if (window.innerWidth > 1008){
         // desktop holding img
         hero_holding_img = 'http://www.stage.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/976xcecesinkde27.jpg';
     } else {
