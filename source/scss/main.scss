@@ -57,6 +57,10 @@
     position: relative;
 }
 
+#loading-spinner {
+    display: none;
+}
+
 @import "hero";
 @import "quotes";
 @import "sections";
