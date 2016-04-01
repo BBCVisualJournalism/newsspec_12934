@@ -59,8 +59,10 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         },
 
         playVideo: function () {
-            this.mp.play();
-            this.hideOverlay();
+            if (window.innerWidth > 800){
+                this.mp.play();
+                this.hideOverlay();
+            }
         },
 
         onPlaying: function () {
@@ -86,9 +88,7 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         },
 
         hideOverlay: function () {
-            if (window.innerWidth > 800){
-                this.$overlay.addClass('bbc-news-vj-video__overlay--hidden');
-            }
+            this.$overlay.addClass('bbc-news-vj-video__overlay--hidden');
         },
 
         hideBgImg: function () {
