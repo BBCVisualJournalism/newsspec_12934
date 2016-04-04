@@ -105,7 +105,7 @@ module.exports = function (grunt) {
             fs     = require('fs');
 
         try {
-            var stagedProject = fs.lstatSync(env.stage.mount + '/news/special/' + config.year + '/newsspec_' + config.project_number + '/content/' + config.services.default); // jshint ignore:line
+            var stagedProject = fs.lstatSync(env.stage.mount + '/news/special/' + config.year + '/newsspec_' + config.project_number + '/content/' + config.wrapper); // jshint ignore:line
 
             if (stagedProject.isDirectory()) {
                 grunt.log.writeln('This content is on stage - OK');

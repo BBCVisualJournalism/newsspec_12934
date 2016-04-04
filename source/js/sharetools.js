@@ -4,13 +4,13 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
         this.$element = $(this.selector);
         this.shareMessage = this.$element.attr('data-message');
         this.shareUrl = this.$element.attr('data-url');
+        this.shareImage = this.$element.attr('data-img');
 
         this.init();
     };
 
     ShareTools.prototype = {
         init: function () {
-            console.log(this.shareMessage);
             wrapper.sharetools.init({
                 holderEl: this.selector,
                 label: 'Share',
@@ -41,16 +41,17 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
         setEvents: function () {
             var self = this;
             this.$element.on('click', function () {
-                self.updateMessages(self.shareMessage);
+                self.updateMessages(self.shareMessage, self.shareImage);
                 self.updateURLs(self.shareUrl);
             });
         },
 
-        updateMessages: function (message) {
+        updateMessages: function (message, shareImage) {
             wrapper.sharetools.setMessages({
                 twitter: message,
                 facebook: {
-                    title: message
+                    title: message,
+                    image: shareImage
                 },
                 email: {
                     subject: 'Shared via BBC News',
