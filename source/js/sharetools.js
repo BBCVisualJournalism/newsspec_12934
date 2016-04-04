@@ -1,5 +1,5 @@
-define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareToolsTemplate) {
-    var ShareTools = function (selector) {
+define(['wrapper', 'jquery', 'ShareTools', 'ShareToolsTemplate'], function (wrapper, $, ShareTools, ShareToolsTemplate) {
+    var ShareToolsWrapper = function (selector) {
         this.selector = selector;
         this.$element = $(this.selector);
         this.shareMessage = this.$element.attr('data-message');
@@ -9,9 +9,9 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
         this.init();
     };
 
-    ShareTools.prototype = {
+    ShareToolsWrapper.prototype = {
         init: function () {
-            wrapper.sharetools.init({
+            this.shareObject = new ShareTools({
                 holderEl: this.selector,
                 label: 'Share',
                 shareUrl: this.shareUrl,
@@ -26,9 +26,11 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
                         message: this.shareMessage
                     },
                     app: {
+                        shareEndpoint: 'bbcnewsapp://visualjournalism/share',
+                        popup: false,
                         properties: {
-                            title: 'App Title',
-                            text: this.shareMessage
+                            title: this.shareMessage,
+                            text: 'Shared via BBC News'
                         }
                     }
                 },
@@ -47,7 +49,7 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
         },
 
         updateMessages: function (message, shareImage) {
-            wrapper.sharetools.setMessages({
+            this.shareObject.setMessages({
                 twitter: message,
                 facebook: {
                     title: message,
@@ -61,9 +63,9 @@ define(['wrapper', 'jquery', 'ShareToolsTemplate'], function (wrapper, $, ShareT
         },
 
         updateURLs: function (shareUrl) {
-            wrapper.sharetools.setShareUrl(shareUrl);
+            this.shareObject.setShareUrl(shareUrl);
         }
     };
 
-    return ShareTools;
+    return ShareToolsWrapper;
 });
