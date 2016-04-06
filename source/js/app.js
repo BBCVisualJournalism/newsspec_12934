@@ -32,43 +32,23 @@ define(['wrapper', 'jquery', 'video', 'sharetools', 'istatsLogger', 'progressive
         new Video(videoSelectors[5],  'p03912vm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/sharon.jpg?v=' + version, false)
     ];
 
-    var pauseVideo = function (index) {
-        var videosToPause = videos.slice(0);
-        console.log('videosToPause before splice', videosToPause);
-        console.log('splicing element ' + index);
+    function pauseVideo(index) {
+        var videosToPause = videos.slice(0); // clone the videos array
         videosToPause.splice(index, 1);
-        console.log('videosToPause after splice', videosToPause);
         for (var i = 0; i < videosToPause.length; i++) {
             videosToPause[i].pause();
         }
-        console.log(videos);
-    };
+    }
 
-    // this doesn't work ;-;
-    // for (var i = 0; i < videoSelectors.length; i++) {
-    //     $.on('video-playing-' + videoSelectors[i], function () {
-    //         pauseVideo(i);
-    //     });
-    // }
+    function setAutopauseEvent(videoIndex) {
+        $.on('video-playing-' + videoSelectors[videoIndex], function () {
+            pauseVideo(videoIndex);
+        });
+    }
 
-    $.on('video-playing-' + videoSelectors[0], function () {
-        pauseVideo(0);
-    });
-    $.on('video-playing-' + videoSelectors[1], function () {
-        pauseVideo(1);
-    });
-    $.on('video-playing-' + videoSelectors[2], function () {
-        pauseVideo(2);
-    });
-    $.on('video-playing-' + videoSelectors[3], function () {
-        pauseVideo(3);
-    });
-    $.on('video-playing-' + videoSelectors[4], function () {
-        pauseVideo(4);
-    });
-    $.on('video-playing-' + videoSelectors[5], function () {
-        pauseVideo(5);
-    });
+    for (var i = 0; i < videoSelectors.length; i++) {
+        setAutopauseEvent(i);
+    }
 
     new ShareTools('#bbc-news-vj-sharetools--1');
     new ShareTools('#bbc-news-vj-sharetools--2');
