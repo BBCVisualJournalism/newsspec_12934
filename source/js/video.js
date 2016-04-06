@@ -65,8 +65,13 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
             }
         },
 
+        pause: function () {
+            this.mp.pause();
+        },
+
         onPlaying: function () {
             this.hideOverlay();
+            $.emit('video-playing-' + this.selector);
             if (this.firstPlay) {
                 this.firstPlay = false;
                 var videoTitle = this.$videoContainer.find('.bbc-news-vj-video__overlay__text__title').text();
