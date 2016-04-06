@@ -7,45 +7,6 @@
 $version: "0.3.0";
 
 .bbc-news-vj-wrapper {
-    // Developer:
-    //  SASS placeholder selectors (i.e. `%button--standard`) mean that the corresponding CSS
-    //  is only pulled into our CSS file if we use `@extend`.
-    //  The CSS for the buttons, radio inputs and checkboxes amount to around 10KB, so only
-    //  include these if you need them.
-    input[type="submit"],
-    input[type="button"],
-    button {
-        @extend %button--standard;
-
-        &:disabled {
-            @extend %button--inactive;
-        }
-
-        &.button--prev {
-            @extend %button--cta-reverse;
-        }
-
-        &.button--next {
-            @extend %button--cta;
-        }
-
-        &.button--reset {
-            @extend %button--reset;
-        }
-    }
-
-    select {
-        @extend %form--select;
-    }
-
-    input[type="checkbox"] {
-        @extend %form--checkbox;
-    }
-
-    input[type="radio"] {
-        @extend %form--radio;
-    }
-
     background-color: #000;
     color: #fff;
     padding-bottom: 1em;
