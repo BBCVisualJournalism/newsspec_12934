@@ -106,6 +106,7 @@
                 display: none;
                 float: left;
                 transition: background-color 500ms;
+                margin-right:15px;
                 &:hover, &:active, &:focus {
                     background-color: darkred;
                 }
