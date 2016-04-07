@@ -24,12 +24,12 @@ define(['wrapper', 'jquery', 'video', 'sharetools', 'istatsLogger', 'progressive
     ];
 
     var videos = [
-        new Video(videoSelectors[0],  'p03pzhl3', hero_holding_img, true),
-        new Video(videoSelectors[1],   'p03912vm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg?v=' + version, false),
-        new Video(videoSelectors[2],   'p03912vm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/miriamde22.jpg?v=' + version, false),
-        new Video(videoSelectors[3], 'p03912vm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/daniele.jpg?v=' + version, false),
-        new Video(videoSelectors[4],  'p03912vm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/cece_smile.jpg?v=' + version, false),
-        new Video(videoSelectors[5],  'p03912vm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/sharon.jpg?v=' + version, false)
+        new Video(videoSelectors[0], 'p03pzhl3', hero_holding_img, true),
+        new Video(videoSelectors[1], 'p03lsq25', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg?v=' + version, false),
+        new Video(videoSelectors[2], 'p03lh2hm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/miriamde22.jpg?v=' + version, false),
+        new Video(videoSelectors[3], 'p03lhwrq', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/daniele.jpg?v=' + version, false),
+        new Video(videoSelectors[4], 'p03lst3b', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/cece_smile.jpg?v=' + version, false),
+        new Video(videoSelectors[5], 'p03lhhy4', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/sharon.jpg?v=' + version, false)
     ];
 
     function pauseVideo(index) {
