@@ -4,7 +4,7 @@ define(['wrapper', 'jquery', 'video', 'sharetools', 'istatsLogger', 'progressive
 
     var hero_holding_img;
 
-    var version = '0.3.3';
+    var version = '0.3.6';
 
     if (window.innerWidth > 1008){
         // desktop holding img

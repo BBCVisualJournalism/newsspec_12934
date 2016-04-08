@@ -20,11 +20,17 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         init: function () {
             var playerSettings = {
                 product: 'news',
+                embedRights: 'allowed',
                 playlistObject: {
                     items : [{
                         vpid : this.vpid
                     }],
                     holdingImageURL: this.holdingImage
+                },
+                ui: {
+                    embed: {
+                        enabled: true
+                    }
                 },
                 responsive: true,
                 autoplay: this.autoplay
