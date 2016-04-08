@@ -11,7 +11,7 @@ define([
 
     var hero_holding_img;
 
-    var version = '0.3.6';
+    var version = '0.3.7';
 
     if (window.innerWidth > 1008){
         // desktop holding img
@@ -31,12 +31,12 @@ define([
     ];
 
     var videos = [
-        new Video(videoSelectors[0], 'p03pzhl3', hero_holding_img, true),
-        new Video(videoSelectors[1], 'p03lsq25', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg?v=' + version, false),
-        new Video(videoSelectors[2], 'p03lh2hm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/miriamde22.jpg?v=' + version, false),
-        new Video(videoSelectors[3], 'p03lhwrq', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/daniele.jpg?v=' + version, false),
-        new Video(videoSelectors[4], 'p03lst3b', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/cece_smile.jpg?v=' + version, false),
-        new Video(videoSelectors[5], 'p03lhhy4', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/sharon.jpg?v=' + version, false)
+        new Video(videoSelectors[0], 'p03pzhl3', hero_holding_img, true, ''),
+        new Video(videoSelectors[1], 'p03lsq25', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726197/embed'),
+        new Video(videoSelectors[2], 'p03lh2hm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/miriamde22.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726190/embed'),
+        new Video(videoSelectors[3], 'p03lhwrq', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/daniele.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726193/embed'),
+        new Video(videoSelectors[4], 'p03lst3b', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/cece_smile.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726195/embed'),
+        new Video(videoSelectors[5], 'p03lhhy4', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/sharon.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726192/embed')
     ];
 
     function pauseVideo(index) {
