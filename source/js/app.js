@@ -11,7 +11,7 @@ define([
 
     var hero_holding_img;
 
-    var version = '0.3.7';
+    var version = '0.3.8';
 
     if (window.innerWidth > 1008){
         // desktop holding img
