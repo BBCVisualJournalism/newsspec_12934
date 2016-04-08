@@ -4,4 +4,5 @@
 <%= include("section_3.tmpl") %>
 <%= include("section_4.tmpl") %>
 <%= include("section_5.tmpl") %>
+<%= include("nextweek.tmpl") %>
 <%= include("credits.tmpl") %>
