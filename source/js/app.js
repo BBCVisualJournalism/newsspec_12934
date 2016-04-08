@@ -1,5 +1,12 @@
-define(['wrapper', 'jquery', 'video', 'sharetools', 'istatsLogger', 'progressiveEnhancement', 'pubsub'], function (wrapper, $, Video, ShareTools, istatsLogger, ProgressiveEnhancement) {
-
+define([
+    'wrapper',
+    'jquery',
+    'video',
+    'sharetools',
+    'istatsLogger',
+    'progressiveEnhancement',
+    'pubsub'
+], function (wrapper, $, Video, ShareTools, istatsLogger, ProgressiveEnhancement) {
     //console.log(wrapper.url().hostUrl, wrapper.url().onbbcdomain, wrapper.url().parameters);
 
     var hero_holding_img;
@@ -61,5 +68,4 @@ define(['wrapper', 'jquery', 'video', 'sharetools', 'istatsLogger', 'progressive
     wrapper.markPageAsLoaded();
 
     ProgressiveEnhancement.init();
-
 });

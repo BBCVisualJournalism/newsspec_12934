@@ -48,7 +48,7 @@ define(['wrapper', 'jquery', 'utils'], function (wrapper, $, utils) {
     var setShareToolsLogging = function () {
         $('.share__tool').on('click', function () {
             var parent = $(this).parents('.bbc-news-vj-sharetools');
-            var shareToolsIndex = parent.attr('id').substr('-1');
+            var shareToolsIndex = parent.attr('id').split('--')[1];
             wrapper.callIstats({
                 actionName: 'newsspec-interaction',
                 actionType: 'user-shared',
