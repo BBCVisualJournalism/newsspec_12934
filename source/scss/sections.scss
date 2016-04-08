@@ -40,8 +40,6 @@
         }
     }
 
-    .nextweek__text {}
-
     .bbc-news-vj-video {
         height: 0;
         padding-bottom: 56.25%;
@@ -152,4 +150,12 @@
             }
         }
     }
+}
+
+.section--nextweek {
+    margin:0;
+}
+
+.section--footer {
+    margin-top:0;
 }
