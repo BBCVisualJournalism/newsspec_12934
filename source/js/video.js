@@ -1,6 +1,6 @@
 define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, utils) {
 
-    var Video = function (videoContainerSelector, vpid, holdingImage, autoplay) {
+    var Video = function (videoContainerSelector, vpid, holdingImage, autoplay, embedURL) {
         this.selector = videoContainerSelector;
         this.$videoContainer = $(this.selector);
         this.videoEl = bump(this.selector).find('.bbc-news-vj-video__player');
@@ -12,6 +12,7 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         this.ctaBreakpoint = 800;
         this.firstPlay = true;
         this.firstEnded = true;
+        this.embedURL = embedURL;
 
         this.init();
     };
@@ -20,8 +21,9 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
         init: function () {
             var playerSettings = {
                 product: 'news',
-                embedRights: 'allowed',
+                externalEmbedUrl: this.embedURL,
                 playlistObject: {
+                    embedRights: 'allowed',
                     items : [{
                         vpid : this.vpid
                     }],
