@@ -31,7 +31,7 @@ define([
     ];
 
     var videos = [
-        new Video(videoSelectors[0], 'p03pzhl3', hero_holding_img, true, '', true, false),
+        new Video(videoSelectors[0], 'p03pzhl3', hero_holding_img, true, '', true, true),
         new Video(videoSelectors[1], 'p03lsq25', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/mami-dog-cropped.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726197/embed', true, true),
         new Video(videoSelectors[2], 'p03lh2hm', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/miriamde22.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726190/embed', true, true),
         new Video(videoSelectors[3], 'p03lhwrq', 'http://newsimg.bbc.co.uk/news/special/2016/newsspec_12934/content/full-width/common/img/daniele.jpg?v=' + version, false, 'http://www.bbc.co.uk/news/magazine-35726193/embed', true, true),
