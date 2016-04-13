@@ -1,18 +1,20 @@
 define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, utils) {
 
-    var Video = function (videoContainerSelector, vpid, holdingImage, autoplay, embedURL) {
+    var Video = function (videoContainerSelector, vpid, holdingImage, autoplay, embedURL, ctaEnabled, controlsEnabled) {
+        this.mp = null;
         this.selector = videoContainerSelector;
         this.$videoContainer = $(this.selector);
         this.videoEl = bump(this.selector).find('.bbc-news-vj-video__player');
         this.vpid = vpid;
         this.holdingImage = holdingImage;
         this.autoplay = window.innerWidth < 1008 ? false : autoplay;
-        this.mp = null;
         this.$overlay = this.$videoContainer.find('.bbc-news-vj-video__overlay');
+        this.embedURL = embedURL;
         this.ctaBreakpoint = 800;
+        this.ctaEnabled = ctaEnabled;
+        this.controlsEnabled = controlsEnabled;
         this.firstPlay = true;
         this.firstEnded = true;
-        this.embedURL = embedURL;
 
         this.init();
     };
@@ -41,8 +43,11 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
             this.mp.load();
             this.setEvents();
 
+            this.setSmpCta(this.ctaEnabled);
+            this.setSmpControls(this.controlsEnabled);
+
             if (this.getWindowWidth() >= this.ctaBreakpoint) {
-                this.disableSmpCta();
+                this.setSmpCta(false);
             }
         },
 
@@ -54,9 +59,9 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
             var self = this;
             $(window).on('resize', function () {
                 if (self.getWindowWidth() >= self.ctaBreakpoint) {
-                    self.disableSmpCta();
+                    self.setSmpCta(false);
                 } else {
-                    self.enableSmpCta();
+                    self.setSmpCta(true);
                 }
             });
             wrapper.onRawScroll(function (scrollTop){
@@ -127,16 +132,20 @@ define(['jquery', 'bump-3', 'wrapper', 'utils'], function ($, bump, wrapper, uti
             return $(window).width();
         },
 
-        disableSmpCta: function () {
+        setSmpCta: function (ctaEnabled) {
             var ui_config = {
-                cta: { enabled: false }
+                cta: { enabled: !!ctaEnabled }
             };
             this.mp.updateUiConfig(ui_config);
         },
 
-        enableSmpCta: function () {
+        setSmpControls: function (controlsEnabled) {
             var ui_config = {
-                cta: { enabled: true }
+                controls: {
+                    enabled: !!controlsEnabled,
+                    always:  !!controlsEnabled,
+                    spaceControlsPlayback: !controlsEnabled
+                }
             };
             this.mp.updateUiConfig(ui_config);
         }
